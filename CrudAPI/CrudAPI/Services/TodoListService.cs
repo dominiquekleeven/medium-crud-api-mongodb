@@ -25,7 +25,7 @@ namespace CrudAPI.Services
             return todoList;
         }
 
-        public async Task<TodoList> Update(TodoList todoList) //Create
+        public async Task<TodoList> Update(TodoList todoList) //Update
         {
             await _collection.ReplaceOneAsync(t => t.Id
                                                    == todoList.Id, todoList);
